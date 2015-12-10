@@ -71,7 +71,10 @@ class NameThatShapeGUI:
         # Display
         self.value.set(self.side_entry.get())
 
-        #self.value = int(self.value)
+        try:
+            int(self.side_entry.get())
+        except:
+            tkMessageBox.showinfo("Response", "Error")
 
         try:
             sides = str(self.side_entry.get())
